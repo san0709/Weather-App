@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #dce4e5, #ced7d8, #c1cacb, #b3bdbe, #a6b0b2);
+}
+
+.card-container {
+  background-image: linear-gradient(to top, #000000, #1c1a1c, #2e2e33, #3d454a, #4e5d5f);
+  display: flex;
+  flex-direction: column;
+  /* Stack input on top of cards */
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.card,
+input,
+button {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.input-container {
+  display: flex;
+  padding: 12px;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.input-container input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  border: none;
+  padding: 4px 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+button img {
+  width: 18px;
+  height: 20px;
+}
+
+.cards-wrapper {
+  display: flex;
+  /* Cards in a row */
+  justify-content: space-evenly;
+  width: 100%;
+  /* Spread cards evenly */
+  flex-wrap: wrap;
+  /* Optional: wrap on smaller screens */
+}
+
+.card {
+  min-width: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #000000;
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+}
