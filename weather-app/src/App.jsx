@@ -56,8 +56,8 @@ function App() {
   // pick the icon based on weather condition
   const getWeatherIcon = () => {
     if (!weatherData) return null;
-    const condition = weatherData.weather[0].main; 
-    return WeatherIcons[condition] || Sunny; 
+    const condition = weatherData.weather[0].main;
+    return WeatherIcons[condition] || Sunny;
   };
 
   return (
@@ -98,15 +98,15 @@ function App() {
 
       {/* Bottom Cards */}
       <div className="cards-wrapper">
-        <Card image={Humidity}>
+        <Card image={Humidity} title="Humidity">
           {weatherData && <div>{weatherData.main.humidity}%</div>}
         </Card>
 
-        <Card image={Temp}>
+        <Card image={Temp} title="Temperature">
           {weatherData && <div>{weatherData.main.temp}°C</div>}
         </Card>
 
-        <Card image={Windy}>
+        <Card image={Windy} title="Wind Speed">
           {weatherData && <div>{weatherData.wind.speed} km/hr</div>}
         </Card>
       </div>

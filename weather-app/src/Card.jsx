@@ -1,10 +1,18 @@
 import React from "react";
-const Card = ({ image, children }) => {
+
+export default function Card({
+  image,
+  title,
+  children,
+  ariaLabel = "weather stat",
+}) {
   return (
-    <div className="card">
-      <img src={image} alt="weather" />
-      {children}
-    </div>
+    <article className="card" aria-label={ariaLabel}>
+      <h6>{title}</h6>
+      <img src={image} alt="" className="card-icon" aria-hidden="true" />
+      <div className="card-body">
+        {children ?? <span className="placeholder">—</span>}
+      </div>
+    </article>
   );
-};
-export default Card;
+}
