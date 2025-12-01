@@ -1,6 +1,3 @@
-Here is a trendy and detailed `README.md` file for your React Weather App project.
-
-````markdown
 # ☁️ WeatherWise: Your Sleek Weather Companion
 
 **A modern, responsive weather application built with React, leveraging the power of the OpenWeatherMap API.**
@@ -113,6 +110,3 @@ const getWeather = async () => {
         // ...
     }
 };
-````
-
------
