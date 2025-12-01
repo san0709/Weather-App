@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  color: white;
 }
 
 body {
@@ -20,11 +21,12 @@ body {
   background-image: linear-gradient(to top, #000000, #1c1a1c, #2e2e33, #3d454a, #4e5d5f);
   display: flex;
   flex-direction: column;
-  /* Stack input on top of cards */
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   padding: 20px;
   border-radius: 16px;
+  height: 90vh;
+  width: 380px;
 }
 
 .card,
@@ -37,11 +39,10 @@ button {
 .input-container {
   display: flex;
   padding: 12px;
-  flex-grow: 1;
   width: 100%;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  gap: 8px;
 }
 
 input::placeholder {
@@ -49,19 +50,19 @@ input::placeholder {
 }
 
 .input-container input {
-  padding: 8px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 8px;
   border: none;
   outline: none;
-  font-family: "Inter", sans-serif;
+  flex: 1;
+  color: white;
 }
 
 button {
   border: none;
-  padding: 4px 4px;
-  border-radius: 5px;
+  padding: 8px 10px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-left: 5px;
 }
 
 button img {
@@ -71,23 +72,19 @@ button img {
 
 .cards-wrapper {
   display: flex;
-  /* Cards in a row */
   justify-content: space-evenly;
   width: 100%;
-  /* Spread cards evenly */
   flex-wrap: wrap;
-  /* Optional: wrap on smaller screens */
+  margin-top: 20px;
 }
 
 .card {
   min-width: 150px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  color: #000000;
-  font-weight: 600;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   margin: 10px;
   text-align: center;
 }
@@ -95,4 +92,28 @@ button img {
 .card img {
   width: 60px;
   height: 60px;
+}
+
+.weather-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  gap: 16px;
+}
+
+.weather-top h2 {
+  margin: 8px 0;
+}
+
+.weather-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.weather-desc {
+  text-transform: capitalize;
+  margin-top: 5px;
+  font-size: 18px;
+  opacity: 0.9;
 }
