@@ -4,6 +4,7 @@ import Card from "./Card.jsx";
 
 // Icons
 import Snow from "./assets/snow.png";
+import Cloud from "./assets/cloudy.png";
 import Rainy from "./assets/rainy.png";
 import Sunny from "./assets/sunny.png";
 import Windy from "./assets/windy.png";
@@ -16,7 +17,7 @@ const WeatherIcons = {
   Rain: Rainy,
   Snow: Snow,
   Clear: Sunny,
-  Clouds: Sunny,
+  Clouds: Cloud,
   Mist: Windy,
   Haze: Windy,
   Smoke: Windy,
@@ -102,11 +103,11 @@ function App() {
           {weatherData && <div>{weatherData.main.humidity}%</div>}
         </Card>
 
-        <Card image={Temp} title="Temperature">
+        <Card image={Temp} title="Temp">
           {weatherData && <div>{weatherData.main.temp}°C</div>}
         </Card>
 
-        <Card image={Windy} title="Wind Speed">
+        <Card image={Windy} title="Wind">
           {weatherData && <div>{weatherData.wind.speed} km/hr</div>}
         </Card>
       </div>
